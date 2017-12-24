@@ -7,3 +7,14 @@
   margin-top: 10px;
   background: whitesmoke;
 }
+
+.para{
+  color: orange;
+  font-size: 50px;
+}
+
+@media (min-width: 500px){
+  .Person{
+    background: violet;
+  }
+}
