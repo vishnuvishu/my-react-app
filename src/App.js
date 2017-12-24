@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.css';
 import Person from './Person/Person';
 
 class App extends Component {
@@ -60,16 +60,8 @@ deletePersonHandler = (personIndex) => {
 
   render() {
 
-    const style = {
-      backgroundColor: 'green',
-      color: 'white',
-      border: '1px solid #bdbdbd',
-      borderRadius: '2px',
-      padding: '8px',
-      fontSize: '17px'
-    }
-
     let persons = null;
+    let btnClass = '';
 
     if(this.state.showPersons){
       persons = (
@@ -99,27 +91,23 @@ deletePersonHandler = (personIndex) => {
             age={this.state.persons[2].age}/> */}
         </div>
       );
-      style.backgroundColor = 'red';
-      style[':hover'] = {
-        backgroundColor: 'salmon',
-        color: 'black'
-      }
+      btnClass = classes.Red;
     }
 
-    const classes = [];
+    const assignedClasses = [];
 
     if(this.state.persons.length <= 2){
-      classes.push('red');
+      assignedClasses.push(classes.red);
     }
     if(this.state.persons.length <= 1){
-      classes.push('bold');
+      assignedClasses.push(classes.bold);
     }
 
     return (
-      <div className="App">
+      <div className={classes.App}>
         <h3>Hi i am a React App</h3>
-        <p className={classes.join(' ')}> Its really working !!!</p>
-        <button style={style}
+        <p className={assignedClasses.join(' ')}> Its really working !!!</p>
+        <button className={btnClass}
           // onClick={() => this.switchNameHandler('vishnu vinayanz')}>Switch name</button>
            onClick={this.togglePersonHandler}>Toggle name</button>
         {persons}
