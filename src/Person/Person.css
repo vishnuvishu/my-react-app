@@ -8,10 +8,10 @@
   background: whitesmoke;
 }
 
-.para{
+/*.para{
   color: orange;
   font-size: 50px;
-}
+}*/
 
 @media (min-width: 500px){
   .Person{
