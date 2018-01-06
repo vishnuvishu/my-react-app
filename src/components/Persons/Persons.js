@@ -27,12 +27,10 @@ class Persons extends Component{
 
   componentWillUpdate(nextProps, nextState){
     console.log('[Update Persons.js] Inside componentWillUpdate', nextProps, nextState);
-
   }
 
   componentDidUpdate(){
     console.log('[Update Persons.js] Inside componentDidUpdate');
-
   }
 
   render(){
